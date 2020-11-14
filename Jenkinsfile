@@ -46,7 +46,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        withAWS(credentials: 'aws-credentials', region: 'us-east-2') {
+        withAWS(credentials: 'aws-credentials-JJCS', region: 'us-east-2') {
           s3Upload(bucket: 'aws-aseguramiento-calidad', file:'dist/pet-book')
         }        
       }
