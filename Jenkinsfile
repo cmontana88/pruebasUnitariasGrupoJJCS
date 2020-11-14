@@ -42,8 +42,8 @@ pipeline {
 
     stage('deploy') {
       steps {
-        withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
-          s3Upload(bucket: 'udem20202-equipo7', file:'dist/pet-book')
+        withAWS(credentials: 'aws-credentials', region: 'us-east-2') {
+          s3Upload(bucket: 'aws-aseguramiento-calidad', file:'dist/pet-book')
         }        
       }
     }
